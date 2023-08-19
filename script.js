@@ -38,3 +38,26 @@ para1.textContent = "ME TOO !";
 content2.appendChild(para1)
 
 container.appendChild(content2)
+
+
+const btn2 = document.querySelector('#btn2');
+btn2.onclick = () => alert("This is method 2");
+
+const btn3 = document.querySelector('#btn3');
+btn3.addEventListener('click', () => {
+    alert("This is method 3");
+})
+
+const btnTest = document.querySelector('#btn-test');
+btnTest.addEventListener('click', function (e) {
+    e.target.style.background = 'blue';
+});
+
+const buttonContainer = document.querySelector('#btn-container')
+const buttonTest = buttonContainer.querySelectorAll('button');
+
+buttonTest.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id)
+    })
+})
